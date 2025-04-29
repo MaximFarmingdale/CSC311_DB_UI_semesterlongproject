@@ -11,7 +11,8 @@ import javafx.stage.Stage;
 public class SignUpController {
     public void createNewAccount(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Info for the user. Message goes here");
+        alert.setContentText("Please Sign Up With A Username With 2-16 Characters And A " +
+                "Password Between 2-16 Characters That Contains A Special Character");
         alert.showAndWait();
     }
 

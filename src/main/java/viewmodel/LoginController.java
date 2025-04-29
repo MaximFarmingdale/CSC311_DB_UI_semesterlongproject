@@ -8,6 +8,8 @@ import javafx.geometry.Side;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
@@ -20,6 +22,11 @@ public class LoginController {
 
     @FXML
     private GridPane rootpane;
+
+    @FXML
+    private TextField usernameTextField;
+    @FXML
+    private PasswordField passwordField;
     public void initialize() {
         rootpane.setBackground(new Background(
                         createImage("https://edencoding.com/wp-content/uploads/2021/03/layer_06_1920x1080.png"),
@@ -47,6 +54,18 @@ public class LoginController {
     }
     @FXML
     public void login(ActionEvent actionEvent) {
+        if(usernameTextField.getText().isEmpty()){
+            usernameTextField.requestFocus();
+            passwordField.setStyle("-fx-border-color: null");
+            usernameTextField.setStyle("-fx-border-color-fill: red");
+            return;
+        }
+        if(passwordField.getText().isEmpty()){
+            passwordField.requestFocus();
+            usernameTextField.setStyle("-fx-border-color: null");
+            passwordField.setStyle("-fx-border-color-fill: red");
+            return;
+        }
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/db_interface_gui.fxml"));
             Scene scene = new Scene(root, 900, 600);

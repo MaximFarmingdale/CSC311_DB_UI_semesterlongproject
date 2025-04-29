@@ -105,11 +105,6 @@
                                 <Insets left="10.0" right="10.0" top="5.0" />
                             </VBox.margin>
                         </TextField>
-                  <Button mnemonicParsing="false" onAction="#SelectImage" prefHeight="25.0" prefWidth="181.0" styleClass="db_btn" text="Image">
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" top="5.0" />
-                     </VBox.margin>
-                  </Button>
                   <Label prefHeight="6.0" prefWidth="3.0" text=" ">
                      <VBox.margin>
                         <Insets bottom="40.0" right="20.0" top="40.0" />
